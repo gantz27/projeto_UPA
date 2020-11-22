@@ -1,4 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="widht=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minumum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Upa</title>
+</head>
+
+<body>
+	<form method="post">
+		{% csrf_token %}
+		<h2>Você tem certeza que deseja remover a Upa:	{{ upa.nome }}  ?</h2>
+		<button type="submit">Confirmar</button>
+	</form>
+</body>
+
+</html>>
 
 
 
