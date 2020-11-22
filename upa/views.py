@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Upa
 from .forms import UpaForm
 
@@ -15,8 +15,8 @@ def create_upa(request):
 
     return render(request, 'upa-form.html', {'form': form})
 
-def update_upa(request,cep):
-    upa = Upa.objects.get(cep=cep)
+def update_upa(request,id):
+    upa = Upa.objects.get(id=id)
     form = UpaForm(request.POST or None, instance=upa)
 
     if form.is_valid():
@@ -26,8 +26,8 @@ def update_upa(request,cep):
     return render (request, 'upa-form.html', {'form': form, 'upa': upa})   
 
 
-def delete_upa(request, cep):
-    upa = Upa.objects.get(cep=cep)
+def delete_upa(request, id):
+    upa = Upa.objects.get(id=id)
 
     if request.method == 'POST':
         crime.delete()

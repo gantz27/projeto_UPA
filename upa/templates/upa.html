@@ -12,14 +12,14 @@
     <ul>
         {% for upa in upas %}
         <a href="{% url 'update_upa' upa.id %}">
-            <li>{{ upa.cep }}</li>
+            <li>{{ upa.nome }}</li>
         </a>
         {% endfor %}
     </ul>
     
 
 
-    <a href="{%url 'create_upa' %">Cadastrar Nova Upa</a>
+    <a href="{%url 'create_upa' %}">Cadastrar Nova Upa</a>
 </body>
 
 </html>
