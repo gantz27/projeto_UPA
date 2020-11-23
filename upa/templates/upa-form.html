@@ -18,8 +18,8 @@
         <button type="submit">Salvar</button>
     </form>
 
-    {% if crime %}
-    <a href="{%url 'delete_upa' upa.id %">Deletar</a>
+    {% if upa %}
+    <a href="{%url 'delete_upa' upa.id %}">Deletar</a>
     {% endif %}
 
 </body>

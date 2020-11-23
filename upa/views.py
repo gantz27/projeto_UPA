@@ -30,7 +30,7 @@ def delete_upa(request, id):
     upa = Upa.objects.get(id=id)
 
     if request.method == 'POST':
-        crime.delete()
+        upa.delete()
         return redirect('list_upa')
 
     return render(request, 'upa-delete-confirm.html', {'upa': upa})         
