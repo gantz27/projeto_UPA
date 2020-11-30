@@ -1,26 +1,47 @@
+{% load static %}
 <!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable-no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upa</title>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Cadastro de Upas</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static '/css/main-forms.css' %}" rel="stylesheet" type="text/css">
+  </head>
+
 
 <body>
+    <body class="centro">
 
+        <div class="container">
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://image.winudf.com/v2/image/YnIuY29tLnJpb2FwcHMuYmVuaHVycXMudXBhX2ljb25fMF8yOGJjNTI5MQ/icon.png?w=170&fakeurl=1" alt="" width="72" height="72">
+            <h2>Cadastro de Upa</h2>
+            <p class="lead">Essa pagina é dedicada somente para a edição e cadastros para o banco de dados para as upas.</p>
+          </div>
+    
     <h1>Cadastro/Edição de Upa</h1>
-
+    <div class = "ligeiro" >  
     <form method="POST">
         {% csrf_token %}
         {{ form }}
-        <button type="submit">Salvar</button>
+        <button type="submit">Salvar</button>   
     </form>
-
-    {% if upa %}
-    <a href="{%url 'delete_upa' upa.id %}">Deletar</a>
-    {% endif %}
+    </div>  
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        {% if upa %}
+        <a href="{%url 'delete_upa' upa.id %}">Deletar</a>
+        {% endif %}
+        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+      </footer>
+    </div>
 
 </body>
 
