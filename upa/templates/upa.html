@@ -4,8 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="Marcus Thulio ,Gabriel Alexandre ,Vinnicius Guilherem ,Danilo Jacob ">
     <meta name="generator" content="Jekyll v4.1.1">
     <title>Upa</title>
 
@@ -31,7 +30,7 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+    <!-- Customização do css -->
     <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
   </head>
 
@@ -49,14 +48,14 @@
     </div>
   </header>
   
-  
+  <!-- Mapa Central -->
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Mapa</h1>
     <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1BuZs8ujOinL4ULcu4Uq_swbs3kLEkucG" width="740" height="480"></iframe>
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary">O pai ta on</a>
     </p>
-    
+  <!-- Listagem das Upas -->  
     <ul>
       {% for upa in upas %}
       <a href="{% url 'update_upa' upa.id %}">
@@ -66,7 +65,7 @@
     </ul>
 
   </main>
-
+  <!-- Rodapé -->
   <footer class="mastfoot mt-auto">
     <div class="inner">
       <p>Copyright © 2020 | <a href="https://github.com/gantz27/projeto_UPA" target="_blank">PROJETO UPA</a></p>
