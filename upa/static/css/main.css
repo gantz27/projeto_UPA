@@ -97,12 +97,12 @@ body {
   }
 }
 
-
 /*
  * Cover
  */
 .cover {
   padding: 0 1.5rem;
+  padding-top: 35px;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
