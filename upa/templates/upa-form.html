@@ -29,7 +29,7 @@
     
     <h1>Cadastro/Edição de Upa</h1>
     <div class = "ligeiro" >  
-    <form method="POST">
+    <form method="POST" class="formulario">
         {% csrf_token %}
         {{ form }}
         <button type="submit">Salvar</button>   
@@ -39,7 +39,7 @@
         {% if upa %}
         <a href="{%url 'delete_upa' upa.id %}">Deletar</a>
         {% endif %}
-        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <p class="mb-1" >&copy; 2020 <a href="https://github.com/gantz27/projeto_UPA" target="_blank">PROJETO UPA</a> </p>
       </footer>
     </div>
 
