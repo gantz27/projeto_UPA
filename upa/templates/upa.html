@@ -47,7 +47,13 @@
       </nav>
     </div>
   </header>
-  
+  <ul>
+    {% for upa in upas %}
+    <a href="{% url 'update_upa' upa.id %}">
+        <li>{{ upa.nome }}</li>
+    </a>
+    {% endfor %}
+  </ul> 
   <!-- Mapa Central -->
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Mapa</h1>
@@ -55,16 +61,8 @@
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary">O pai ta on</a>
     </p>
-    
-    <ul class="list-upa">
-  <!-- Listagem das Upas -->  
-    <ul>
-      {% for upa in upas %}
-      <a href="{% url 'update_upa' upa.id %}">
-          <li>{{ upa.nome }}</li>
-      </a>
-      {% endfor %}
-    </ul> 
+     <!-- Listagem das Upas --> 
+ 
 
   </main>
   <!-- Rodapé -->

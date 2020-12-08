@@ -26,7 +26,7 @@ SECRET_KEY = 'no#1wup$=&1a6peuhzr&vpn$a$85)2eks6vrw8(q&1u)5t6jqa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['projeto-upa.herokuapp.com']
+ALLOWED_HOSTS = ['projeto-upa.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
